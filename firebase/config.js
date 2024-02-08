@@ -1,8 +1,8 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from "firebase/database"; // Importez getDatabase
 
-// Your web app's Firebase configuration
+// Votre configuration Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyA66Z1m7AtRCN1tD3sLib3qSKNPLQmxfik",
   authDomain: "yowl-48c83.firebaseapp.com",
@@ -13,12 +13,14 @@ const firebaseConfig = {
   measurementId: "G-SDKCJYB2C7"
 };
 
-// Initialize Firebase
+// Initialisez Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase Analytics
-// Comment out or remove the following line if you do not want to use Firebase Analytics
+// Initialisez Firebase Analytics
 const analytics = getAnalytics(app);
 
-// Export the Firebase app and analytics instances
-export { app, analytics };
+// Initialisez Firebase Realtime Database avec l'URL spécifique de votre base de données
+const db = getDatabase(app, "https://yowl-48c83-default-rtdb.europe-west1.firebasedatabase.app");
+
+// Exportez l'application Firebase, Analytics, et l'instance de la base de données
+export { app, analytics, db };

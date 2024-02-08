@@ -14,7 +14,6 @@ function Login() {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-      // Même fonction pour créer ou mettre à jour le profil de l'utilisateur.
       createOrUpdateUserProfile(user);
       console.log('Utilisateur connecté avec succès:', user);
       navigate('/home');
@@ -29,7 +28,6 @@ function Login() {
       username: user.displayName,
       email: user.email,
       profilePictureUrl: user.photoURL
-      // Ajoutez ici d'autres champs si nécessaire.
     });
   };
 
