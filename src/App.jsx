@@ -4,10 +4,11 @@ import Home from './pages/Home';
 import Signup from './components/Signup';
 import PagesArtist from './pages/PagesArtist';
 import PagesAfter from './pages/PagesAfter';
-import Profile from './pages/Profile'; 
-import CGU from './pages/cgu'; 
-import CGV from './pages/cgv'; 
-import Confidentialite from './pages/conf'; 
+import Profile from './pages/Profile';
+import CGU from './pages/CGU';
+import CGV from './pages/CGV';
+import Confidentialite from './pages/conf';
+import Login from './components/Login'; // Assurez-vous que le chemin est correct
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
           <Route path="/pagesartist" element={<PagesArtist />} />
           <Route path="/pagesafter" element={<PagesAfter />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/cgu" element={<CGU />} /> 
-          <Route path="/cgv" element={<CGV />} /> 
-          <Route path="/confidentialite" element={<conf/>} /> 
+          <Route path="/cgu" element={<CGU />} />
+          <Route path="/cgv" element={<CGV />} />
+          <Route path="/conf" element={<Confidentialite />} />
+          <Route path="/login" element={<Login />} /> {/* Ligne ajoutée pour la route Login */}
         </Routes>
       </div>
     </Router>
