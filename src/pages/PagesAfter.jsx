@@ -65,7 +65,7 @@ const PagesArtists = () => {
   };
 
   const handleNextStep = () => {
-    navigate('/pages-musics'); // Remplacez par votre route réelle
+    navigate('/Profile'); // Remplacez par votre route réelle
   };
 
   return (
